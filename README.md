@@ -229,15 +229,3 @@ getContent.launch("image/*")
 因为模拟器没有图片可选，所以没有内容展示
 
 ![](https://files.mdnice.com/user/15648/4e2cd452-100d-413c-9bf7-95facdf8cfbb.gif)
-
-
-
-
-
-
-
-
-
-
-
-

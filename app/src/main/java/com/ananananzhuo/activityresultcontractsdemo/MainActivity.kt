@@ -116,9 +116,12 @@ class MainActivity : CustomAdapterActivity() {
             override fun callback(callData: CallData) {
                 customContract.launch(1)
             }
+        }),
+        ItemData(title = "跳转到新页面，测试fragment中使用ActivityRC",callback = object :Callback{
+            override fun callback(callData: CallData) {
+                startActivity(Intent(this@MainActivity,CustomFragmentActivity::class.java))
+            }
         })
-
-
     )
 
     /**
