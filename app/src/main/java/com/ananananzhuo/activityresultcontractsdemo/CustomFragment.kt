@@ -29,10 +29,13 @@ class CustomFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btn).setOnClickListener {
-            request.launch(Intent(activity, DestinishActivity::class.java))
+            request.launch(Intent(activity, DestinishActivity::class.java))//启动新activity
         }
     }
 
+    /**
+     * 注册结果监听
+     */
     val request = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         logEE(it.data?.getStringExtra("data")!!)
     }
