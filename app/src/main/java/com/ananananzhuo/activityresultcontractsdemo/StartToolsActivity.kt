@@ -11,7 +11,7 @@ class StartToolsActivity : CustomAdapterActivity() {
     override fun getAdapterDatas(): MutableList<ItemData> = mutableListOf(
         ItemData("启动activity"){
             ActivityController.getInstance(this).startActivity(object :LifeInterface{
-                override fun start(): Intent {
+                override fun generateIntent(): Intent {
                     return Intent(this@StartToolsActivity, CustomFragmentActivity::class.java)
                 }
 

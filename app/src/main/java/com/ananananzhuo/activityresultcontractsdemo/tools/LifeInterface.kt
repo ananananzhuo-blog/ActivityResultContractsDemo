@@ -9,7 +9,7 @@ import androidx.activity.result.ActivityResult
  * date    :2021/9/28
  **/
 interface LifeInterface {
-    fun start():Intent
+    fun generateIntent():Intent
 
     fun onActivityResult(result:ActivityResult)
 }
