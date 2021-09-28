@@ -121,7 +121,10 @@ class MainActivity : CustomAdapterActivity() {
             override fun callback(callData: CallData) {
                 startActivity(Intent(this@MainActivity,CustomFragmentActivity::class.java))
             }
-        })
+        }),
+        ItemData(title = "借助fragment写一个万能的可以在任意位置启动startActivityForResult工具"){
+            startActivity(Intent(this,StartToolsActivity::class.java))
+        }
     )
 
     /**

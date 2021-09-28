@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ActivityResultContractsDemo">
-        <activity android:name=".CustomFragmentActivity"></activity>
+        <activity
+            android:name=".StartToolsActivity"
+            android:exported="true" />
+        <activity android:name=".CustomFragmentActivity" />
         <activity android:name=".DestinishActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
