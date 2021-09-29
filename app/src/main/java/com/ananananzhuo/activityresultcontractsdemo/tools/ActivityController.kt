@@ -1,6 +1,5 @@
 package com.ananananzhuo.activityresultcontractsdemo.tools
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
 /**
@@ -17,8 +16,9 @@ class ActivityController(val activity: AppCompatActivity) {
     fun startActivity(lifeInterface: LifeInterface) {
         val fragment = ToolsFragment()
         fragment.setCallback(lifeInterface)
-        activity.supportFragmentManager.beginTransaction()
-            .add(fragment, "${System.currentTimeMillis()}").commit()
+        activity.supportFragmentManager.apply {
+            beginTransaction().add(fragment, "${System.currentTimeMillis()}").commit()
+        }
 
     }
 

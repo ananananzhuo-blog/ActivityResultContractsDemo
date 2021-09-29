@@ -9,14 +9,18 @@ import com.ananananzhuo.mvvm.bean.bean.ItemData
 
 class StartToolsActivity : CustomAdapterActivity() {
     override fun getAdapterDatas(): MutableList<ItemData> = mutableListOf(
-        ItemData("启动activity"){
+        ItemData("启动activity"){calldata->
             ActivityController.getInstance(this).startActivity(object :LifeInterface{
                 override fun generateIntent(): Intent {
-                    return Intent(this@StartToolsActivity, CustomFragmentActivity::class.java)
+                    return Intent(this@StartToolsActivity, ReturnResultActivity::class.java)
                 }
 
                 override fun onActivityResult(result: ActivityResult) {
-
+                    if(result.resultCode==100){
+                        val data = result.data?.getStringExtra("data")
+                        calldata.itemData.content=data
+                        calldata.itemData.notifyDataSetChange()
+                    }
                 }
             })
         }
