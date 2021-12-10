@@ -19,7 +19,5 @@ class ActivityController(val activity: AppCompatActivity) {
         activity.supportFragmentManager.apply {
             beginTransaction().add(fragment, "${System.currentTimeMillis()}").commit()
         }
-
     }
-
 }

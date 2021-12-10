@@ -6,6 +6,7 @@ import android.net.Uri
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
+import com.ananananzhuo.fragmentcommunicationsample.activitycommunication.Comm1Activity
 import com.ananananzhuo.mvvm.activity.CustomAdapterActivity
 import com.ananananzhuo.mvvm.bean.bean.ItemData
 import com.ananananzhuo.mvvm.callback.CallData
@@ -124,6 +125,9 @@ class MainActivity : CustomAdapterActivity() {
         }),
         ItemData(title = "借助fragment写一个万能的可以在任意位置启动startActivityForResult工具"){
             startActivity(Intent(this,StartToolsActivity::class.java))
+        },
+        ItemData(title = "两个activity中的两个fragment实现数据的传输"){
+            startActivity(Intent(this,Comm1Activity::class.java))
         }
     )
 

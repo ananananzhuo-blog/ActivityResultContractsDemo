@@ -28,7 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name="com.ananananzhuo.fragmentcommunicationsample.activitycommunication.Comm1Activity"/>
+        <activity android:name="com.ananananzhuo.fragmentcommunicationsample.activitycommunication.Comm2Activity"/>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
